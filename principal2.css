@@ -1,0 +1,186 @@
+.tit-section{
+    position: relative;
+    padding-bottom: 1.25rem;
+    width: 100vw;
+    height: 9.375rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: url(img2/projects.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.deg-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.tit-section h1 {
+    position: relative;
+    color: var(--verde);
+    text-shadow: 0 0 5px currentColor;
+}
+
+
+/* Seccion2 */
+.section2 {
+    width: 100%;
+    max-width: 65.625rem;
+    margin: 1.25rem auto 0;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    min-width: 17.5rem;
+    width: 100%;
+    max-width: 20rem;
+}
+
+.royal {
+    width: 6.25rem;
+    height: 11.875rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #f2f2f2;
+    transform: rotate(-40deg) skew(20deg, 10deg);
+    transition: top .4s;
+}
+
+.royal h1{
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--morado);
+}
+
+.royal::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2.5rem;
+    width: 2.5rem;
+    height: 100%;
+    background: #c2c2c2;
+    transform-origin: right;
+    transform: skewY(-43deg);
+    box-shadow: inset 5px 0 var(--morado);
+}
+
+.royal::after{
+    box-shadow: inset 0 -5px var(--morado);
+    content: '';
+    position: absolute;
+    background: #e5e5e5;
+    bottom: -2.375rem;
+    left: 0;
+    width: 100%;
+    height: 2.375rem;
+    transform-origin: top;
+    transform: skewX(-47deg);
+}
+
+.royal img {
+    border-radius: 0.625rem;
+    width: 5.5rem;
+    height: 4.37rem;
+    object-fit: cover;
+}
+
+.button {
+    width: 9.375rem;
+    height: 2.1875rem;
+    font-size: 1rem;
+    color: var(--light);
+    font-weight: 600;
+    margin: 1.25rem auto;
+    background: linear-gradient(to right, var(--morado) 0%, var(--azulC) 33%, var(--morado) 66%, var(--morado) 100%);
+    background-size: 400%;
+    border: none;
+    border-radius: 10px;
+    transition: background-position-x .5s;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+}
+
+.button:is(:hover, :focus) {
+    background-position-x: 56%;
+}
+
+.royal .button {
+    width: 5rem;
+    height: 1.5625rem;
+}
+
+.antiroyal {
+    display: flex;
+    flex-direction: column;
+}
+
+.antiroyal h1 {
+    background: linear-gradient(45deg, var(--morado), var(--azulC), var(--morado));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--morado);
+    margin-bottom: 0.625rem;
+}
+
+.antiroyal p {
+    font-weight: 600;
+}
+
+.antiroyal p::first-letter {color: var(--morado);}
+
+@media (min-aspect-ratio: 7 / 6) {
+    .royal {
+        width: 7.5rem;
+        height: 13.75rem;
+    }
+    
+    .royal h1{
+        font-size: 1.5rem;
+    }
+
+    .royal img {
+        width: 6.875rem;
+        height: 4.375rem;
+    }
+    
+    .royal::before{
+        left: -3.125rem;
+        width: 3.125rem;
+    }
+    
+    .royal::after{
+        bottom: -3rem;
+        height: 3rem;
+    }
+
+    .royal .button {
+        width: 5.625rem;
+        height: 1.75rem;
+    }
+
+}
